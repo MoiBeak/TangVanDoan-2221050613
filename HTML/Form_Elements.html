@@ -1,0 +1,74 @@
+<!-- Phần tử <label>
+Phần tử này <label>định nghĩa nhãn cho một số phần tử biểu mẫu.
+
+Phần tử này <label>hữu ích cho người dùng trình đọc màn hình, vì trình đọc màn hình sẽ đọc to nhãn khi người dùng tập trung vào phần tử nhập liệu.
+
+Thành phần này <label>cũng hỗ trợ những người dùng gặp khó khăn khi nhấp chuột vào các vùng rất nhỏ (như nút chọn hoặc hộp kiểm) - vì khi người dùng nhấp vào văn bản bên trong <label>thành phần này, nó sẽ chuyển đổi trạng thái của nút chọn/hộp kiểm.
+
+Thuộc fortính của <label>thẻ phải bằng với idthuộc tính của <input> phần tử để liên kết chúng với nhau. -->
+<!-- Phần tử <select>
+Phần tử này <select>định nghĩa một danh sách thả xuống: -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Tang Van Doan</h2>
+
+    <p>2221050613</p>
+
+    <form action="/action_page.php">
+      <label for="cars">Choose a car:</label>
+      <select id="cars" name="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="submit" />
+    </form>
+    <!-- Phần tử này <option>định nghĩa một tùy chọn có thể được chọn.
+
+    Mặc định, mục đầu tiên trong danh sách thả xuống sẽ được chọn.
+
+    Để xác định một tùy chọn được chọn trước, hãy thêm selectedthuộc tính vào tùy chọn đó: -->
+    <option value="fiat" selected>Fiat</option>
+    <!-- Sử dụng sizethuộc tính này để chỉ định số lượng giá trị hiển thị: -->
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars" size="3">
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+    <!-- Sử dụng multiplethuộc tính này để cho phép người dùng chọn nhiều hơn một giá trị: -->
+    <label for="cars">Choose a car:</label>
+    <select id="cars" name="cars" size="4" multiple>
+      <option value="volvo">Volvo</option>
+      <option value="saab">Saab</option>
+      <option value="fiat">Fiat</option>
+      <option value="audi">Audi</option>
+    </select>
+    <!-- Phần tử này <textarea>định nghĩa một trường nhập liệu nhiều dòng (vùng văn bản): -->
+    <textarea name="message" rows="10" cols="30">
+        The cat was playing in the garden.
+    </textarea>
+    <!-- Thuộc tính này rowschỉ định số dòng hiển thị trong vùng văn bản.
+
+    Thuộc tính này colschỉ định chiều rộng hiển thị của vùng văn bản. -->
+    <textarea name="message" style="width: 200px; height: 600px">
+    The cat was playing in the garden.
+    </textarea>
+    <!-- Phần tử này <fieldset>được sử dụng để nhóm các dữ liệu liên quan trong một biểu mẫu.
+
+    Phần tử này <legend>định nghĩa chú thích cho <fieldset> phần tử đó. -->
+    <form action="/action_page.php">
+      <fieldset>
+        <legend>Personalia:</legend>
+        <label for="fname">First name:</label><br />
+        <input type="text" id="fname" name="fname" value="John" /><br />
+        <label for="lname">Last name:</label><br />
+        <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>

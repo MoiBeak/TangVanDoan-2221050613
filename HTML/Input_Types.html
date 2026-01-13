@@ -1,0 +1,135 @@
+<!-- <input type="text">Định nghĩa một trường nhập văn bản một dòng : -->
+<form>
+  <label for="fname">Tang Van Doan</label><br />
+  <input type="text" id="fname" name="fname" /><br />
+  <label for="lname">2221050613</label><br />
+  <input type="text" id="lname" name="lname" />
+</form>
+<!-- <input type="password">Định nghĩa trường mật khẩu : -->
+<form>
+  <label for="username">Username:</label><br />
+  <input type="text" id="username" name="username" /><br />
+  <label for="pwd">Password:</label><br />
+  <input type="password" id="pwd" name="pwd" />
+</form>
+<!-- <input type="submit">Định nghĩa một nút để gửi dữ liệu biểu mẫu đến trình xử lý biểu mẫu .
+
+Trình xử lý biểu mẫu thường là một trang phía máy chủ chứa một đoạn mã để xử lý dữ liệu đầu vào.
+
+Trình xử lý biểu mẫu được chỉ định trong action thuộc tính của biểu mẫu: -->
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br />
+  <input type="text" id="fname" name="fname" value="John" /><br />
+  <label for="lname">Last name:</label><br />
+  <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+  <input type="submit" value="Submit" />
+</form>
+<!-- <input type="reset">Định nghĩa một nút đặt lại sẽ khôi phục tất cả các giá trị trong biểu mẫu về giá trị mặc định: -->
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br />
+  <input type="text" id="fname" name="fname" value="John" /><br />
+  <label for="lname">Last name:</label><br />
+  <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+  <input type="submit" value="Submit" />
+  <input type="reset" value="Reset" />
+</form>
+<!-- <input type="radio">Định nghĩa một nút chọn (radio button) .
+
+Nút chọn (radio button) cho phép người dùng CHỈ CHỌN MỘT trong số các lựa chọn có giới hạn: -->
+<p>Choose your favorite Web language:</p>
+
+<form>
+  <input type="radio" id="html" name="fav_language" value="HTML" />
+  <label for="html">HTML</label><br />
+  <input type="radio" id="css" name="fav_language" value="CSS" />
+  <label for="css">CSS</label><br />
+  <input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+  <label for="javascript">JavaScript</label>
+</form>
+<!-- <input type="checkbox">Định nghĩa một hộp kiểm .
+
+Hộp kiểm cho phép người dùng chọn KHÔNG hoặc NHIỀU tùy chọn từ một số lượng lựa chọn giới hạn. -->
+<form>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+  <label for="vehicle1"> I have a bike</label><br />
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+  <label for="vehicle2"> I have a car</label><br />
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+  <label for="vehicle3"> I have a boat</label>
+</form>
+<!-- <input type="button">Định nghĩa một nút : -->
+<input type="button" onclick="alert('Hello World!')" value="Click Me!" />
+<!-- Thuộc tính này <input type="color">được sử dụng cho các trường nhập liệu cần chứa màu sắc.
+
+Tùy thuộc vào trình duyệt có hỗ trợ hay không, một công cụ chọn màu có thể hiển thị trong trường nhập liệu. -->
+<form>
+  <label for="favcolor">Select your favorite color:</label>
+  <input type="color" id="favcolor" name="favcolor" />
+</form>
+<!-- Ký tự này <input type="date">được sử dụng cho các trường nhập liệu cần chứa ngày tháng.
+
+Tùy thuộc vào khả năng hỗ trợ của trình duyệt, một công cụ chọn ngày có thể hiển thị trong trường nhập liệu. -->
+<form>
+  <label for="birthday">Birthday:</label>
+  <input type="date" id="birthday" name="birthday" />
+</form>
+<!-- Mục này <input type="datetime-local">chỉ định trường nhập ngày và giờ, không có múi giờ.
+
+Tùy thuộc vào khả năng hỗ trợ của trình duyệt, một công cụ chọn ngày có thể hiển thị trong trường nhập liệu. -->
+<form>
+  <label for="birthdaytime">Birthday (date and time):</label>
+  <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
+</form>
+<!-- Thẻ này <input type="email">được sử dụng cho các trường nhập liệu cần chứa địa chỉ email.
+
+Tùy thuộc vào trình duyệt có hỗ trợ hay không, địa chỉ email có thể được tự động xác thực khi gửi đi.
+
+Một số điện thoại thông minh nhận biết loại email và thêm ".com" vào bàn phím để khớp với kiểu nhập email. -->
+<form>
+  <label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email" />
+</form>
+<!-- Đoạn mã này <input type="image"> định nghĩa một hình ảnh là nút gửi.
+
+Đường dẫn đến hình ảnh được chỉ định trong srcthuộc tính.
+
+ -->
+<form>
+  <input
+    type="image"
+    src="img_submit.gif"
+    alt="Submit"
+    width="48"
+    height="48"
+  />
+</form>
+<!-- Phần này <input type="file"> định nghĩa một trường chọn tập tin và một nút "Duyệt" để tải lên tập tin. -->
+<form>
+  <label for="myfile">Select a file:</label>
+  <input type="file" id="myfile" name="myfile" />
+</form>
+<!-- Đoạn mã này <input type="hidden"> định nghĩa một trường nhập liệu ẩn (không hiển thị với người dùng).
+
+Trường ẩn cho phép các nhà phát triển web đưa vào dữ liệu mà người dùng không thể nhìn thấy hoặc chỉnh sửa khi biểu mẫu được gửi đi.
+
+Trường ẩn thường lưu trữ thông tin về bản ghi nào trong cơ sở dữ liệu cần được cập nhật khi biểu mẫu được gửi đi. -->
+<form>
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <input type="hidden" id="custId" name="custId" value="3487" />
+  <input type="submit" value="Submit" />
+</form>
+<!-- Tính năng này <input type="month">cho phép người dùng chọn tháng và năm.
+
+Tùy thuộc vào khả năng hỗ trợ của trình duyệt, một công cụ chọn ngày có thể hiển thị trong trường nhập liệu. -->
+<form>
+  <label for="bdaymonth">Birthday (month and year):</label>
+  <input type="month" id="bdaymonth" name="bdaymonth" />
+</form>
+<!-- Mục này <input type="number">định nghĩa một trường nhập liệu số .
+
+Bạn cũng có thể đặt ra các hạn chế về những số điện thoại được chấp nhận. -->
+<form>
+  <label for="quantity">Quantity (between 1 and 5):</label>
+  <input type="number" id="quantity" name="quantity" min="1" max="5" />
+</form>

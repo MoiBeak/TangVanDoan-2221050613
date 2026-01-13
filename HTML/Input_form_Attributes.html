@@ -1,0 +1,51 @@
+<!-- Thuộc tính `input` formchỉ định biểu mẫu mà <input>phần tử đó thuộc về.
+
+Giá trị của thuộc tính này phải bằng với thuộc tính id của phần tử <form> mà nó thuộc về. -->
+<form action="/action_page.php" id="form1">
+  <label for="fname">Tang Van Doan</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <input type="submit" value="Submit" />
+</form>
+
+<label for="lname">2221050613</label>
+<input type="text" id="lname" name="lname" form="form1" />
+<!-- Thuộc tính `input` formactionchỉ định URL của tệp sẽ xử lý dữ liệu đầu vào khi biểu mẫu được gửi đi. -->
+<form action="/action_page.php">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" /><br /><br />
+  <input type="submit" value="Submit" />
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin" />
+</form>
+<!-- Thuộc tính input formenctype chỉ định cách dữ liệu biểu mẫu sẽ được mã hóa khi gửi đi (chỉ áp dụng cho các biểu mẫu có phương thức="post"). -->
+<form action="/action_page_binary.asp" method="post">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <input type="submit" value="Submit" />
+  <input
+    type="submit"
+    formenctype="multipart/form-data"
+    value="Submit as Multipart/form-data"
+  />
+</form>
+<!-- Thuộc tính `input` formmethod xác định phương thức HTTP để gửi dữ liệu biểu mẫu đến URL hành động. -->
+<form action="/action_page.php" method="get">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname" /><br /><br />
+  <label for="lname">Last name:</label>
+  <input type="text" id="lname" name="lname" /><br /><br />
+  <input type="submit" value="Submit using GET" />
+  <input type="submit" formmethod="post" value="Submit using POST" />
+</form>
+<!-- Ghi chú về phương thức "get":
+
+    Phương pháp này thêm dữ liệu biểu mẫu vào URL dưới dạng cặp tên/giá trị.
+    Phương pháp này hữu ích cho việc gửi biểu mẫu mà người dùng muốn đánh dấu kết quả.
+    Có một giới hạn về lượng dữ liệu bạn có thể đưa vào URL (giới hạn này khác nhau giữa các trình duyệt), do đó, bạn không thể chắc chắn rằng tất cả dữ liệu trong biểu mẫu sẽ được truyền tải chính xác.
+    Tuyệt đối không sử dụng phương thức "get" để truyền thông tin nhạy cảm! (mật khẩu hoặc thông tin nhạy cảm khác sẽ hiển thị trên thanh địa chỉ của trình duyệt) -->
+<!-- Ghi chú về phương pháp "post":
+
+    Phương pháp này gửi dữ liệu biểu mẫu dưới dạng giao dịch HTTP POST.
+    Các biểu mẫu được gửi bằng phương thức "đăng" không thể được đánh dấu trang.
+    Phương thức "post" mạnh mẽ và an toàn hơn phương thức "get", và "post" không có giới hạn về kích thước. -->

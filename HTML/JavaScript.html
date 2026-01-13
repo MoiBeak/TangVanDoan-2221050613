@@ -1,0 +1,33 @@
+<!-- Thẻ HTML <script>được sử dụng để định nghĩa một đoạn mã kịch bản phía máy khách (JavaScript).
+Phần tử này <script>hoặc chứa các câu lệnh kịch bản, hoặc trỏ đến một tệp kịch bản bên ngoài thông qua src thuộc tính.
+JavaScript thường được sử dụng để chỉnh sửa hình ảnh, xác thực biểu mẫu và thay đổi nội dung động.
+Để chọn một phần tử HTML, JavaScript thường sử dụng document.getElementById() phương thức `select()`.
+Ví dụ JavaScript này viết "Hello JavaScript!" vào một phần tử HTML có id="demo": -->
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Tang Van Doan</h1>
+    <h2>2221050613</h2>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').innerHTML = Date()"
+    >
+      Click me to display Date and Time.
+    </button>
+
+    <p id="demo"></p>
+    <!-- p nay hien thi ket qua truy van -->
+
+    <h2>Use JavaScript to Change Text</h2>
+    <p>
+      This example writes "Hello JavaScript!" into an HTML element with
+      id="demo":
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    </script>
+  </body>
+</html>

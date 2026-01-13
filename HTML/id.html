@@ -1,0 +1,41 @@
+<!-- Lưu ý: Tên ID phân biệt chữ hoa chữ thường!
+Lưu ý: Tên ID phải chứa ít nhất một ký tự, không được bắt đầu bằng số và không được chứa khoảng trắng (dấu cách, dấu tab, v.v.).
+Tên lớp (class) có thể được sử dụng bởi nhiều phần tử HTML, trong khi tên ID chỉ được sử dụng bởi một phần tử HTML duy nhất trong trang -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Style the element with the id "myHeader" */
+      #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+      }
+
+      /* Style all elements with the class name "city" */
+      .city {
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Tang Van Doan</h2>
+    <p>2221050613</p>
+
+    <!-- An element with a unique id -->
+    <h1 id="myHeader">My Cities</h1>
+
+    <!-- Multiple elements with same class -->
+    <h2 class="city">London</h2>
+    <p>London is the capital of England.</p>
+
+    <h2 class="city">Paris</h2>
+    <p>Paris is the capital of France.</p>
+
+    <h2 class="city">Tokyo</h2>
+    <p>Tokyo is the capital of Japan.</p>
+  </body>
+</html>

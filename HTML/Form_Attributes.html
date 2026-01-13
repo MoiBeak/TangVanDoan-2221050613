@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Tang Van Doan</h2>
+
+    <p>2221050613</p>
+
+    <form action="/action_page.php" target="_blank" method="get">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" value="John" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" value="Doe" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <p>
+      After you submit, notice that the form values is visible in the address
+      bar of the new browser tab.
+    </p>
+  </body>
+</html>
+
+<!-- Thuộc tính mục tiêu
+            Thuộc tính này targetchỉ định vị trí hiển thị phản hồi nhận được sau khi gửi biểu mẫu.
+
+            Thuộc tính này targetcó thể có một trong các giá trị sau:
+
+            Value	    Description
+            _blank	    The response is displayed in a new window or tab
+            _self	    The response is displayed in the current window
+            _parent	    The response is displayed in the parent frame
+            _top	    The response is displayed in the full body of the window
+            framename	The response is displayed in a named iframe -->
+<!-- Thuộc tính này methodchỉ định phương thức HTTP sẽ được sử dụng khi gửi dữ liệu
+    biểu mẫu. Dữ liệu biểu mẫu có thể được gửi dưới dạng biến URL (với method="get")
+    hoặc dưới dạng giao dịch HTTP POST (với method="post"). Phương thức HTTP mặc
+    định khi gửi dữ liệu biểu mẫu là GET.
+Ghi chú về GET:
+
+    Thêm dữ liệu biểu mẫu vào URL, dưới dạng cặp tên/giá trị.
+    TUYỆT ĐỐI KHÔNG sử dụng phương thức GET để gửi dữ liệu nhạy cảm! (dữ liệu đã gửi từ biểu mẫu sẽ hiển thị trong URL!)
+    Độ dài của URL bị giới hạn (2048 ký tự).
+    Hữu ích cho các biểu mẫu mà người dùng muốn đánh dấu kết quả.
+    Phương thức GET phù hợp với dữ liệu không bảo mật, ví dụ như chuỗi truy vấn trong Google.
+Ghi chú về POST:
+
+    Thêm dữ liệu biểu mẫu vào bên trong phần thân của yêu cầu HTTP (dữ liệu biểu mẫu đã gửi sẽ không hiển thị trong URL).
+    Phương thức POST không có giới hạn về kích thước và có thể được sử dụng để gửi lượng dữ liệu lớn.
+    Các biểu mẫu được gửi bằng phương thức POST không thể được đánh dấu trang. -->
