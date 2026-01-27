@@ -8,6 +8,7 @@ public class HomeController : Controller
 {
     public IActionResult Index()
     {
+       ViewBag.Message = "Chào mừng đến với ASP.NET MVC";
         return View();
     }
 

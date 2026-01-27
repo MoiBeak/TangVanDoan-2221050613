@@ -1,0 +1,24 @@
+ @model YourProjectName.Models.Student
+
+    <h2>Thông tin sinh viên</h2>
+
+    <form method="post">
+        <div>
+            <label>Mã sinh viên</label>
+            <input type="text" name="StudentCode" />
+        </div>
+
+        <div>
+            <label>Họ tên</label>
+            <input type="text" name="FullName" />
+        </div>
+
+        <br />
+        <button type="submit">Gửi</button>
+
+    </form>
+
+  @if (ViewBag.Message != null)
+  {
+  <h3>@ViewBag.Message</h3>
+  }
