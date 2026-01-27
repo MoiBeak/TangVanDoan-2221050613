@@ -1,6 +1,6 @@
 //  using System.Web.Mvc;
 using Microsoft.AspNetCore.Mvc;
-using YourProjectName.Models;
+using newMVC.Models;
 
   public class StudentController : Controller
   {

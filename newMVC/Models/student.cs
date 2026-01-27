@@ -1,4 +1,4 @@
- namespace YourProjectName.Models
+ namespace newMVC.Models
     {
     public class Student
     {

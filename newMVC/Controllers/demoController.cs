@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace demoMVCControllers
+namespace newMVC.Controllers
 {
-    public class demoController : Controller
+    public class DemoController : Controller
     {
         public IActionResult Index()
         {
