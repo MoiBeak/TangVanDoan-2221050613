@@ -1,8 +1,14 @@
- namespace newMVC.Models
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace newMVC.Models
     {
+[Table("Student")]
     public class Student
-    {
-    public string StudentCode { get; set; }
+    
+{
+   [Key]
+    public required string StudentCode { get; set; }
     public string FullName { get; set; }
     }
     }
