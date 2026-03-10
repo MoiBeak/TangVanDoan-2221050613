@@ -1,4 +1,3 @@
-using Microsoft.Build.Evaluation;
 using Microsoft.EntityFrameworkCore;
 using newMVC.Models;
 
@@ -11,8 +10,6 @@ namespace newMVC.Data
         {
         }
 
-        // Ví dụ tạo bảng Product
-     
         public DbSet<Student> Students { get; set; }
     }
 }

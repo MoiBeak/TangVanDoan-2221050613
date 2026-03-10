@@ -1,0 +1,19 @@
+@model newMVC.Models.Student
+
+<div class="container mt-4">
+    <h2>Xác nhận xoá</h2>
+
+    <div class="alert alert-danger">
+        Bạn có chắc muốn xoá sinh viên này không?
+    </div>
+
+    <p><strong>Student Code:</strong> @Model.StudentCode</p>
+    <p><strong>Full Name:</strong> @Model.FullName</p>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id"/>
+
+        <button type="submit" class="btn btn-danger">Xoá</button>
+        <a asp-action="Index" class="btn btn-secondary">Huỷ</a>
+    </form>
+</div>
