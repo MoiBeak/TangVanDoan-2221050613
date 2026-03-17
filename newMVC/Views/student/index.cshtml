@@ -10,22 +10,39 @@
             <tr>
                 <th>Student Code</th>
                 <th>Full Name</th>
+                <th>Age</th>
+                <th>Email</th>
                 <th width="180">Action</th>
             </tr>
         </thead>
 
         <tbody>
-        @foreach (var item in Model)
+
+        @if (Model != null && Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.StudentCode</td>
+                    <td>@item.FullName</td>
+                    <td>@item.Age</td>
+                    <td>@item.Email</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
         {
             <tr>
-                <td>@item.StudentCode</td>
-                <td>@item.FullName</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
+                <td colspan="5" class="text-center text-danger">
+                    Chưa có dữ liệu sinh viên
                 </td>
             </tr>
         }
+
         </tbody>
     </table>
 </div>
