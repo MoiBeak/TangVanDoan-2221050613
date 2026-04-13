@@ -1,40 +1,54 @@
-@model newMVC.Models.Student
+@model newMVC.Models.Entities.Student
 
 <div class="container mt-4">
     <h2>Thêm sinh viên</h2>
 
     <form asp-action="Create" method="post">
-
         <!-- Hiển thị lỗi tổng -->
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+        <!-- Student Code -->
         <div class="mb-3">
             <label asp-for="StudentCode" class="form-label"></label>
             <input asp-for="StudentCode" class="form-control" />
             <span asp-validation-for="StudentCode" class="text-danger"></span>
         </div>
 
+        <!-- Full Name -->
         <div class="mb-3">
             <label asp-for="FullName" class="form-label"></label>
             <input asp-for="FullName" class="form-control" />
             <span asp-validation-for="FullName" class="text-danger"></span>
         </div>
 
+        <!-- Age -->
         <div class="mb-3">
             <label asp-for="Age" class="form-label"></label>
-            <input asp-for="Age" class="form-control" />
+            <input asp-for="Age" class="form-control" type="number" />
             <span asp-validation-for="Age" class="text-danger"></span>
         </div>
 
+        <!-- Email -->
         <div class="mb-3">
             <label asp-for="Email" class="form-label"></label>
-            <input asp-for="Email" class="form-control" />
+            <input asp-for="Email" class="form-control" type="email" />
             <span asp-validation-for="Email" class="text-danger"></span>
         </div>
 
+        <!-- Faculty Dropdown -->
+        <div class="mb-3">
+            <label asp-for="FacultyId" class="form-label"></label>
+            <select asp-for="FacultyId"
+                    class="form-select"
+                    asp-items="ViewBag.FacultyId">
+                <option value="">-- Chọn khoa --</option>
+            </select>
+            <span asp-validation-for="FacultyId" class="text-danger"></span>
+        </div>
+
+        <!-- Buttons -->
         <button type="submit" class="btn btn-success">Lưu</button>
         <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
-
     </form>
 </div>
 

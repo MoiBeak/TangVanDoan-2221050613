@@ -1,4 +1,4 @@
-@model IEnumerable<newMVC.Models.Student>
+@model IEnumerable<newMVC.Models.Entities.Student>
 
 <div class="container mt-4">
     <h2 class="mb-3">Danh sách sinh viên</h2>
@@ -12,12 +12,12 @@
                 <th>Full Name</th>
                 <th>Age</th>
                 <th>Email</th>
+                <th>Faculty</th> <!-- Thêm cột Khoa -->
                 <th width="180">Action</th>
             </tr>
         </thead>
 
         <tbody>
-
         @if (Model != null && Model.Any())
         {
             foreach (var item in Model)
@@ -27,6 +27,7 @@
                     <td>@item.FullName</td>
                     <td>@item.Age</td>
                     <td>@item.Email</td>
+                    <td>@item.Faculty?.FacultyName</td> <!-- Hiển thị tên khoa -->
                     <td>
                         <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm">Edit</a>
                         <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">Delete</a>
@@ -37,12 +38,11 @@
         else
         {
             <tr>
-                <td colspan="5" class="text-center text-danger">
+                <td colspan="6" class="text-center text-danger">
                     Chưa có dữ liệu sinh viên
                 </td>
             </tr>
         }
-
         </tbody>
     </table>
 </div>
