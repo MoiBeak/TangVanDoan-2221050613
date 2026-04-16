@@ -98,5 +98,22 @@ namespace newMVC.Controllers
             }
             return RedirectToAction(nameof(Index));
         }
+        // GET: Products/Details/5
+        public async Task<IActionResult> Details(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var faculty = await _context.Faculties
+                .FirstOrDefaultAsync(m => m.Id == id);
+            if (faculty == null)
+            {
+                return NotFound();
+            }
+
+            return View(faculty);
+        }
     }
 }
