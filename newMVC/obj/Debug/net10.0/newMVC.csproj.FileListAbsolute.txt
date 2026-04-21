@@ -365,3 +365,11 @@ E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\runtimes\win-x64\native\e_sqlite3.dll
 E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\runtimes\win-x86\native\e_sqlite3.dll
 E:\PTPMQL-2526\newMVC\obj\Debug\net10.0\newMVC.csproj.AssemblyReference.cache
 E:\PTPMQL-2526\newMVC\obj\Debug\net10.0\newMVC.csproj.Up2Date
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\ClosedXML.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\ClosedXML.Parser.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\DocumentFormat.OpenXml.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\DocumentFormat.OpenXml.Framework.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\ExcelNumberFormat.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\RBush.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\SixLabors.Fonts.dll
+E:\PTPMQL-2526\newMVC\bin\Debug\net10.0\System.IO.Packaging.dll
