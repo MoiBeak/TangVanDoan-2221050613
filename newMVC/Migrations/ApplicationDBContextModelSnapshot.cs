@@ -17,6 +17,25 @@ namespace newMVC.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.3");
 
+            modelBuilder.Entity("newMVC.Models.Entities.Categories", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Customer", b =>
                 {
                     b.Property<int>("CustomerId")
@@ -45,6 +64,62 @@ namespace newMVC.Migrations
                     b.ToTable("Customers");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.ExportInvoiceDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ExportInvoiceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExportInvoiceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ExportInvoiceDetails");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ExportInvoices", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("ExportDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("ReceiverName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("SupplierId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("ExportInvoices");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Faculty", b =>
                 {
                     b.Property<int>("Id")
@@ -59,6 +134,58 @@ namespace newMVC.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Faculties");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ImportInvoiceDetail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ImportInvoiceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("TotalPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<decimal>("UnitPrice")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ImportInvoiceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("ImportInvoiceDetails");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ImportInvoices", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("ImportDate")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("TotalAmount")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("ImportInvoices");
                 });
 
             modelBuilder.Entity("newMVC.Models.Entities.Order", b =>
@@ -129,6 +256,41 @@ namespace newMVC.Migrations
                     b.ToTable("Products");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.Product1", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("SupplierId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Unit")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("SupplierId");
+
+                    b.ToTable("Product1");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Student", b =>
                 {
                     b.Property<int>("Id")
@@ -161,6 +323,91 @@ namespace newMVC.Migrations
                     b.ToTable("Students");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.Suppliers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Suppliers");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ExportInvoiceDetail", b =>
+                {
+                    b.HasOne("newMVC.Models.Entities.ExportInvoices", "ExportInvoice")
+                        .WithMany("ExportInvoiceDetails")
+                        .HasForeignKey("ExportInvoiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("newMVC.Models.Entities.Product1", "Product")
+                        .WithMany("ExportInvoiceDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ExportInvoice");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ExportInvoices", b =>
+                {
+                    b.HasOne("newMVC.Models.Entities.Suppliers", "Supplier")
+                        .WithMany()
+                        .HasForeignKey("SupplierId");
+
+                    b.Navigation("Supplier");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ImportInvoiceDetail", b =>
+                {
+                    b.HasOne("newMVC.Models.Entities.ImportInvoices", "ImportInvoice")
+                        .WithMany("ImportInvoiceDetails")
+                        .HasForeignKey("ImportInvoiceId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("newMVC.Models.Entities.Product1", "Product")
+                        .WithMany("ImportInvoiceDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("ImportInvoice");
+
+                    b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ImportInvoices", b =>
+                {
+                    b.HasOne("newMVC.Models.Entities.Suppliers", "Supplier")
+                        .WithMany()
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Order", b =>
                 {
                     b.HasOne("newMVC.Models.Entities.Customer", "Customer")
@@ -191,6 +438,25 @@ namespace newMVC.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.Product1", b =>
+                {
+                    b.HasOne("newMVC.Models.Entities.Categories", "Category")
+                        .WithMany("Products")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("newMVC.Models.Entities.Suppliers", "Supplier")
+                        .WithMany("Products")
+                        .HasForeignKey("SupplierId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+
+                    b.Navigation("Supplier");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Student", b =>
                 {
                     b.HasOne("newMVC.Models.Entities.Faculty", "Faculty")
@@ -202,14 +468,29 @@ namespace newMVC.Migrations
                     b.Navigation("Faculty");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.Categories", b =>
+                {
+                    b.Navigation("Products");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Customer", b =>
                 {
                     b.Navigation("Orders");
                 });
 
+            modelBuilder.Entity("newMVC.Models.Entities.ExportInvoices", b =>
+                {
+                    b.Navigation("ExportInvoiceDetails");
+                });
+
             modelBuilder.Entity("newMVC.Models.Entities.Faculty", b =>
                 {
                     b.Navigation("Students");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.ImportInvoices", b =>
+                {
+                    b.Navigation("ImportInvoiceDetails");
                 });
 
             modelBuilder.Entity("newMVC.Models.Entities.Order", b =>
@@ -220,6 +501,18 @@ namespace newMVC.Migrations
             modelBuilder.Entity("newMVC.Models.Entities.Product", b =>
                 {
                     b.Navigation("OrderDetails");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.Product1", b =>
+                {
+                    b.Navigation("ExportInvoiceDetails");
+
+                    b.Navigation("ImportInvoiceDetails");
+                });
+
+            modelBuilder.Entity("newMVC.Models.Entities.Suppliers", b =>
+                {
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }
